@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, sans-serif, Arial;
+}
+
+/*achtergrond patroon*/
+body {
+    background-image: url(afbeeldingen/patroonAchtergrond.png);
+    background-repeat: repeat;
+}
+
+/*start menu*/
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: deepskyblue;
+}
+
+.logo {
+    margin: 0 0 0 .45em;
+}
+
+.logo a {
+    color: rgb(28, 24, 22);
+}
+
+.logo,
+.navigation {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.logo a,
+.navigation a {
+    text-decoration: none;
+    letter-spacing: .45rem;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.navigation a:hover {
+    background: #00ace6;
+}
+
+/* *********** resizen portfiolio *********** */
+@media all and (max-width: 990px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+
+/* ****** resizen portfolio****** */
+@media all and (max-width: 600px) {
+
+    .logo {
+        margin: .25em 0;
+        align-self: left;
+        /* Zet het logo links van de 'flex-container' */
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: deepskyblue;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+
+
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10%;
+}
