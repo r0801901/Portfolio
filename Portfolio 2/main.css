@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, sans-serif, Arial;
+}
+
+/*achtergrond patroon*/
+body {
+    background-image: url(afbeeldingen/patroonAchtergrond.png);
+    background-repeat: repeat;
+}
+
+/*start menu*/
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: deepskyblue;
+}
+
+.logo {
+    margin: 0 0 0 .45em;
+}
+
+.logo a {
+    color: rgb(28, 24, 22);
+}
+
+.logo,
+.navigation {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.logo a,
+.navigation a {
+    text-decoration: none;
+    letter-spacing: .45rem;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation a {
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.navigation a:hover {
+    background: #00ace6;
+}
+
+/* *********** resizen portfiolio *********** */
+@media all and (max-width: 990px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+
+/* ****** resizen portfolio****** */
+@media all and (max-width: 600px) {
+
+    .logo {
+        margin: .25em 0;
+        align-self: left;
+        /* Zet het logo links van de 'flex-container' */
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: deepskyblue;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+
+
+}
+
+.Contact {
+    align-content: center;
+    text-align: center;
+
+}
+
+h2 {
+    margin-top: 5%;
+    font-family: Verdana, sans-serif, Arial;
+}
+
+.mijnKnop {
+    background: linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color: #79bbff;
+    border-radius: 36px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 27px 40px;
+    text-decoration: none;
+}
+
+.mijnKnop:hover {
+    background: linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color: #378de5;
+}
+
+.mijnKnop:active {
+    position: relative;
+    top: 1px;
+}
+
+.cv {
+    align-content: center;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.h1 h2 {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.article {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.kwaliteitenGoed {
+    text-align: center;
+    float: left;
+    padding-left: 20%;
+}
+
+.kwaliteitenSlecht {
+    text-align: center;
+    float: right;
+    padding-right: 20%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+}
+
+/* Structuur */
+
+.wrapper {
+    padding: 5px;
+    max-width: 960px;
+    width: 95%;
+    margin: 20px auto;
+}
+
+header {
+    padding: 0 15px;
+}
+
+.kollomen {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.kollom {
+    flex: 1;
+    border: 1px solid gray;
+    margin: 2px;
+    padding: 10px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width: 980px) {
+    .kollomen .kolom {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+
+        &:nth-last-child(2) {
+            margin-right: 0;
+        }
+
+        &:last-child {
+            flex-basis: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .kollomen .kolom {
+        flex-basis: 100%;
+        margin: 0 0 5px 0;
+    }
+}
